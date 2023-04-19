@@ -1,0 +1,300 @@
+body{
+    background-color:rgb(95,95,95);
+}
+.planner{
+    background-color: rgb(63,61,62);
+    border-radius: 10px;
+    
+    margin-top: 5%;
+    
+}
+.menu_p{
+    padding: 2%;
+}
+/* .card_module{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+} */
+.card {
+    background-color: rgb(154,154,154);
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+.content_p{
+    background-color: rgb(35,33,34);
+    color: white;
+}
+input[type="text"]{
+    background-color: rgb(102,100,101);
+    width: 100%;
+    border-radius:6px;
+    padding: 5px;
+    border: 1px solid rgb(102,100,101);
+    margin-bottom: 5%;
+    color: white;
+}
+select{
+    width: 100%;
+    border-radius:6px;
+    padding: 6px;
+    color: black;
+}
+.i{
+    margin: 3%;
+    padding: 8%;
+    border-radius: 50%;
+    
+
+}
+
+
+.nbre{
+    font-weight: 700;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 23px;
+    text-align: end;
+}
+.titre{
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5%;
+
+}
+.titre i{
+    margin-left: 10%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+header h2{
+    color: white;
+}
+.entete{
+    background-color: rgb(64,62,63);
+    font-size: 70%;
+    text-align: start;
+}
+.date{
+    background-color: rgb(35,33,34);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.582);
+    border-radius:10px 0px 0px 10px ;
+    height: 100px;
+    text-align: justify;
+    display: flex;
+    font-size: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edt{
+   border-radius: 10px;
+    background-color: rgb(93,105,103);
+    margin-top: 1px;
+    margin-bottom: 1px;
+ 
+}
+.cours{
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 1px;
+    text-shadow: 1px 1px 2px black;
+    /* background-color: rgba(234, 0, 255, 0.774); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+#enseignants{
+    font-size: 70%;
+}
+#modules{
+    font-size: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#salles{
+    font-size: 80%;
+}
+#erreur,#erreur2{
+    color: red;
+    text-align: center;
+}
+.modale{
+    display: none;
+    position: fixed;
+    top: 25%;
+    z-index: 1000;
+
+}
+.modale2{
+    display: none;
+    position: fixed;
+    top: 25%;
+    z-index: 1000;
+
+}
+ .div1{
+    background-color: rgb(29, 26, 28);
+    margin: 0px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+ .div2{ 
+    background-color: rgba(36, 33, 35, 0.74);
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+    
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+    
+}
+#m_ens{
+    display: none;
+}
+#module_ens{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+form div select{
+    width: 200px;
+}
+#valeur_ajouter{
+    width: 50%;
+}
+#nbre_places,#effectifs{
+    width: 30%;
+}
+#m_sa{
+    display: none;
+
+}
+#m_cl{
+    display: none;
+}
+.fa-plus{
+    cursor: pointer;
+}
+.fa-times{
+    display: none;
+    justify-content: end;
+    cursor: pointer;
+    color: red;
+}
+#suggestion{
+    width: 100%;
+    max-height: 300px;
+    padding: 0%;
+    
+}
+
+#suggestion li{
+    list-style: none;
+    min-height: 30px;
+    width: auto;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-start: 2%;
+    color: #ffffff;
+    cursor: pointer;
+   
+}
+#suggestion li:hover{
+background-color: #03030380;
+color: #ffffff;
+}
+/* PARTIE TOGGLE BOUTON  rgb(69,133,60)*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* PARTIE TOGGLE BOUTON */

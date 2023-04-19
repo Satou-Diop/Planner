@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title> Planner</title>
+  </head>
+  <body class="container">
+    <div class="planner row ">
+        <div class="menu_p col-sm-4">
+            <input type="text" id="rechercher" placeholder="Rechercher...">
+            <ul id="suggestion"> 
+               
+            </ul>
+            <div class="module" id="module">
+                <div class="row card_module">
+                    <div class="col-sm-5 card" id="enseignants">
+                        <div><i class=" i fa fa-chalkboard-teacher" style="color: #ffffff; background-color: rgb(87,186,239);"></i> <span class="nbre" id="n_ens"></span> </div>
+                        <span class="titre">Enseignants<i class=" ajouter_element fa fa-plus" style="color: #ffffff;"></i></span>
+                    </div> 
+                    <div class="col-sm-5 card" id="salles">
+                        <div><i class=" i fa fa-home" style="color: #ffffff; background-color: rgb(237,128,14);" ></i>  <span class="nbre" id="n_sa"></span>  </div>
+                        <span class="titre">Salles<i class=" ajouter_element fa fa-plus" style="color: #ffffff;"></i></span>
+                    </div> 
+                    <div class="col-sm-5 card" id="classes">
+                        <div><i class=" i fa fa-users" style="color: #ffffff; background-color: rgb(11,159,16);"></i>  <span class="nbre" id="n_cl"></span>  </div>
+                        <span class="titre">Classes<i class=" ajouter_element fa fa-plus" style="color: #ffffff;"></i></span>
+                    </div> 
+                    <div class="col-sm-5 card" id="modules">
+                        <div><i class=" i fa fa-trash" style="color: #ffffff; background-color: rgb(203,43,48);"></i>  <span class="nbre" id="n_md"></span> </div>
+                        <span class="titre">Modules<i class=" ajouter_element fa fa-plus" style="color: #ffffff;"></i></span>
+                    </div> 
+
+                </div>
+
+                <select id="select">
+                   
+                </select>
+                
+
+            </div>
+
+        
+        </div>
+        <div class="content_p col-sm-8">
+            <br>
+            <header>
+               
+                <h2>PLANNING : <span id="titre"> </span></h2>
+                <label class="switch">
+                    <input type="checkbox" id="theme">
+                    <span class="slider round"></span>
+                  </label>
+                
+            </header>
+             <span> <span id="n_cours"> 0</span> cours</span>
+            <div class="row entete">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1">8H</div>
+                <div class="col-sm-1">9H</div>
+                <div class="col-sm-1">10H</div>
+                <div class="col-sm-1">11H</div>
+                <div class="col-sm-1">12H</div>
+                <div class="col-sm-1">13H</div>
+                <div class="col-sm-1">14H</div>
+                <div class="col-sm-1">15H</div>
+                <div class="col-sm-1">16H</div>
+                <div class="col-sm-1">17H</div>
+            </div>
+
+            <div class="row edt " id="lundi">
+                
+                <div class="col-md-2 date"> <span>LUNDI</span> <i  id="lundi" class="fa fa-plus" style="color:rgb(69,133,60);"></i></div>
+                <!-- <div class="col-4 offset-1 cours"><i class="fa fa-times"></i> <span id="enseignant">ALyg</span> <span id="module">PHP</span> <span id="salle">101</span> </div>
+                 -->
+            </div>
+            <div class="row edt " id="mardi">
+                <div class="col-sm-2 date"> <span>MARDI</span> <i id="mardi" class="fa fa-plus" style="color:rgb(69,133,60);"></i></div>
+               
+            </div>
+            <div class="row edt " id="mercredi">
+                <div class="col-sm-2 date"> <span>MERCREDI</span> <i id="mercredi" class="fa fa-plus" style="color:rgb(69,133,60);"></i></div>
+               
+            </div>
+            <div class="row edt " id="jeudi">
+                <div class="col-sm-2 date"> <span>JEUDI</span> <i id="jeudi" class="fa fa-plus" style="color:rgb(69,133,60);"></i></div>
+               
+            </div>
+            <div class="row edt " id="vendredi">
+                <div class="col-sm-2 date"> <span>VENDRDI</span> <i id="vendredi" class="fa fa-plus" style="color:rgb(69,133,60);"></i></div>
+               
+            </div>
+            <div class="row edt " id="samedi">
+                <div class="col-sm-2 date"> <span>SAMEDI</span> <i id="samedi" class="fa fa-plus" style="color:rgb(69,133,60);"></i></div>
+               
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+      <div class="row justify-content-center " id="modale">
+        <div class="col-sm-6  modale">
+            <div class="div1">
+                <h4> Modal Title</h4>
+            </div>
+
+            <div class="div2">
+                <form action="">
+                    <div>
+                        <label for=""> Module </label><select name="" id="m_module" > </select>
+                    </div>
+                    <div>
+                        <label for=""> Enseignant </label><select name="" id="m_enseignant" > </select>
+                    </div>
+                    <div>
+                        <label for=""> Salle </label><select name="" id="m_salle" > </select>
+                    </div>
+                    <div>
+                        <label for=""> Heure de début </label>
+                        <select name="m_debut" id="m_debut" > 
+                            <option value="8"> 8H</option>
+                            <option value="9"> 9H</option>
+                            <option value="10"> 10H</option>
+                            <option value="11"> 11H</option>
+                            <option value="12"> 12H</option>
+                            <option value="13"> 13H</option>
+                            <option value="14"> 14H</option>
+                            <option value="15"> 15H</option>
+                            <option value="16"> 16H</option>
+                            <option value="17"> 17H</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for=""> Heure de Fin </label>
+                        <select name="" id="m_fin" > 
+                            
+                            <option value="9"> 9H</option>
+                            <option value="10"> 10H</option>
+                            <option value="11"> 11H</option>
+                            <option value="12"> 12H</option>
+                            <option value="13"> 13H</option>
+                            <option value="14"> 14H</option>
+                            <option value="15"> 15H</option>
+                            <option value="16"> 16H</option>
+                            <option value="17"> 17H</option>
+
+                        </select>
+                    </div>
+                </form>
+                <br><br>
+                <p id="erreur"></p>
+            </div>
+            <div class="div1">
+                <button id="annuler" >Annuler</button> <button id="envoyer">Envoyer</button>
+            </div>
+            
+        </div>
+      </div>
+
+      <div class="row justify-content-center " id="modale2">
+        <div class="col-sm-6  modale2">
+            <div class="div1">
+                <h4> Modal Title</h4>
+            </div>
+
+            <div class="div2">
+                <br>
+                <form action="">
+                    <div>
+                        <label for=""> Nom </label> <input id="valeur_ajouter" type="text">
+                    </div>
+                    <div id="m_sa">
+                        <label for=""> Nombre de places </label> <input id="nbre_places" type="number" min="0" value="0">
+                    </div>
+                    <div id="m_cl">
+                        <label for=""> Effectifs</label> <input id="effectifs" type="number" min="0" value="0">
+                    </div>
+                    <section id="m_ens">
+                        <div>
+                            <label for="">Selectionnez les modules : </label>
+                            
+                        </div>
+                      
+                           <section id="module_ens">
+                                
+                         
+                           </section>
+                        
+                    </section>
+
+                    
+                </form>
+                <p id="erreur2"></p>
+            </div>
+            <div class="div1">
+                <button id="annuler2" >Annuler</button> <button id="envoyer2">Ajouter</button>
+            </div>
+            
+        </div>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="main.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
